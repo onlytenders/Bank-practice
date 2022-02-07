@@ -11,16 +11,7 @@ abstract class Account {
         return value;
     }
 
-    public void addMoney(int amount) {
-        value += amount;
-    }
-
-    public void pay(int amount) {
-        value -= amount;
-    }
-
-    public void transfer(Account acc, int amount) {
-        value -= amount;
-        acc.addMoney(amount);
-    }
+    abstract void addMoney(int amount);
+    abstract void pay(int amount);
+    abstract void transfer(Account acc, int amount);
 }
