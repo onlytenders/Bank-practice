@@ -1,7 +1,7 @@
 package accounts;
 
-abstract class Account {
-    private int value;
+abstract public class Account {
+    protected int value;
 
     public Account(int value) {
         this.value = value;
@@ -11,7 +11,7 @@ abstract class Account {
         return value;
     }
 
-    abstract void addMoney(int amount);
-    abstract void pay(int amount);
-    abstract void transfer(Account acc, int amount);
+    public abstract void addMoney(int amount);
+    public abstract void pay(int amount);
+    public abstract void transfer(Account acc, int amount);
 }

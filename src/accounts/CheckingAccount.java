@@ -1,7 +1,7 @@
 package accounts;
 
-public class SavingsAccount extends Account {
-    public SavingsAccount(int value) {
+public class CheckingAccount extends Account{
+    public CheckingAccount(int value) {
         super(value);
     }
 
@@ -12,7 +12,12 @@ public class SavingsAccount extends Account {
 
     @Override
     public void pay(int amount) {
-        System.out.println("The operation is not available on this account");
+        if (super.value - amount >= 0) {
+            super.value -= amount;
+        }
+        else {
+            System.out.println("The account's value is not enough for this operation");
+        }
     }
 
     @Override
